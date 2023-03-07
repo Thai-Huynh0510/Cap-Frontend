@@ -21,4 +21,4 @@ const Homepage = () =>{
     </div>
     )
 }
-export default HomePage
+export default Homepage
