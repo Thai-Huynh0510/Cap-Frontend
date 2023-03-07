@@ -3,7 +3,7 @@ import { combineReducers, applyMiddleware, legacy_createStore as createStore } f
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 
-// import all reducers from barrel file
+//import all reducers from barrel file
 import * as reducers from './reducers';
 
 // Construct our Redux store;
