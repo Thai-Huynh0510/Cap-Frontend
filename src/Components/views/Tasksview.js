@@ -1,0 +1,97 @@
+import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+const TasksView = ({ tasks, deleteTask }) => {
+  
+    if (!tasks.length) {
+      return (
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          margin: '6rem',
+          flexDirection: 'column'
+        }}>
+          <h2>There are no tasks.</h2>
+          <Link to={`/newtask`}>
+            <button>
+              Add Task
+            </button>
+          </Link>
+        </div>
+      );
+    }
+  
+    return (
+      <div>
+        <NavBar />
+        <div className="all-tasks">
+          <div className="header">
+            <h1>Manage Tasks</h1>
+            <div className="notice">
+              <h4>Click on Task description to edit</h4>
+            </div>
+          </div>
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Tasks</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                  <th>Due Date</th>
+                  <th>Comments</th>
+                </tr>
+                {tasks.map(task => {
+                  return (
+                    <tr key={task.id}>
+                      <td>{task.id}</td>
+                      <td>
+                        <Link className="link" to={`/tasks/${task.id}`}>
+                          {task.description}
+                        </Link>
+                      </td>
+                      <td>{task.completion_status}</td>
+                      <td>
+                        <div className="action-button-wrap">
+                          <button
+                            onClick={() => deleteTask(task.id)}
+                            className="delete-button"
+                          >
+                          </button>
+  
+                          <Link className="link" to={`/tasks/${task.id}`}>
+                            <button
+                              style={{ 
+                                backgroundColor: '#0818A8', 
+                                width: '3rem', 
+                                padding: '3px', 
+                                borderRadius: '5px'}}
+                              >
+                            </button>
+                          </Link>
+                        </div>
+  
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <div className="buttons-wrap">
+          <Link to={`/newtask`}>
+            <button>
+              Add New Task
+            </button>
+          </Link>
+        </div>
+        
+      </div>
+    )
+  }
+  
+  export default TasksView
