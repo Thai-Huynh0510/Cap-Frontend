@@ -13,3 +13,12 @@ export const fetchAllTasksThunk = () => async (dispatch) => {
       console.log(error)
     }
   }
+ // delete task
+export const deleteTaskThunk = taskId => async dispatch => {
+  try {
+    await axios.delete(`${path}/tasks/${taskId}`);
+    dispatch(ac.deleteTask(taskId));
+  } catch(err) {
+    console.error(err);
+  }
+};

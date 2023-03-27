@@ -60,3 +60,38 @@ button:hover {
   align-items: center;
   margin: 5px;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  text-align: left;
+}
+
+th {
+  background-color: #F0F8FF;
+}
+
+td {
+  background-color: #fafafa;
+}
+.delete-button {
+  background-color: #ff4500;
+  width: 3rem;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: medium;
+  cursor: pointer;
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.action-button-wrap {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}

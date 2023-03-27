@@ -1,30 +1,11 @@
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+//import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri'
 const TasksView = ({ tasks, deleteTask }) => {
   
-    if (!tasks.length) {
-      return (
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          margin: '6rem',
-          flexDirection: 'column'
-        }}>
-          <h2>There are no tasks.</h2>
-          <Link to={`/newtask`}>
-            <button>
-              Add Task
-            </button>
-          </Link>
-        </div>
-      );
-    }
   
     return (
       <div>
-        <NavBar />
         <div className="all-tasks">
           <div className="header">
             <h1>Manage Tasks</h1>
@@ -39,9 +20,9 @@ const TasksView = ({ tasks, deleteTask }) => {
                   <th>Tasks</th>
                   <th>Description</th>
                   <th>Status</th>
-                  <th>Actions</th>
                   <th>Due Date</th>
                   <th>Comments</th>
+                  <th>Actions</th>
                 </tr>
                 {tasks.map(task => {
                   return (
