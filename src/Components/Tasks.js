@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { Connect } from "react-redux";
-import { fetchAllTasksThunk,  } from "../store/thunks";
+import { connect } from "react-redux"
+import { fetchAllTasksThunk, deleteTaskThunk  } from "../store/thunks";
+import TasksView from "./views/Tasksview";
 
 class Tasks extends Component {
     componentDidMount() {
