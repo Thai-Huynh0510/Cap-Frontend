@@ -3,7 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 
 import Homepage from './Components/HomePage';
 import Tasks from './Components/Tasks';
-import Employees from './components/Employees';
+import Employees from './Components/Employees';
 
 const App = () => {
   return (
