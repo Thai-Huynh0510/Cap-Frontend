@@ -40,3 +40,20 @@ export const addTask = (task) => {
     payload: task
   };
 };
+
+//fetch employee 
+export const fetchAllEmployees = (employees) => {
+  return {
+    type: at.FETCH_ALL_EMPLOYEES,
+    payload: employees
+  }
+}
+
+
+//Delete employee 
+export const deleteEmployee = (employeeId) => {
+  return {
+    type: at.DELETE_EMPLOYEE,
+    payload: employeeId,
+  };
+};

@@ -4,6 +4,30 @@ import axios from 'axios';
 
 //PATH (should be where your server is running)
 let path = "http://localhost:5001/api";
+
+//Fetch all Employees 
+
+export const fetchAllEmployeesThunk = () => async (dispatch) => {
+  try {
+    let res = await axios.get(`${path}/employees`)
+    dispatch(ac.fetchAllEmployees(res.data))
+  } catch(error) {
+    console.log(error)
+  }
+}
+
+// Delete Employees 
+export const deleteEmployeeThunk = employeeId => async dispatch => {
+  try {
+    await axios.delete(`${path}/employees/${employeeId}`);
+    // delete succesful so change state with dispatch
+    dispatch(ac.deleteEmployee(employeeId));
+  } catch(err) {
+    console.error(err);
+  }
+};
+
+
 // All tasks
 export const fetchAllTasksThunk = () => async (dispatch) => {
     try {
