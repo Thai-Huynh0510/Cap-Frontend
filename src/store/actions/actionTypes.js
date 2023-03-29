@@ -1,6 +1,7 @@
 // ACTION TYPES;
 //All departments
 export const FETCH_ALL_EMPLOYEES = "FETCH_ALL_EMPLOYEES";
+export const DELETE_EMPLOYEE = "DELETE_EMPLOYEE";
 // all Tasks
 export const FETCH_ALL_TASKS = "FETCH_ALL_TASKS";
 export const EDIT_TASK = "EDIT_TASK";
