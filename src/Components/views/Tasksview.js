@@ -2,15 +2,12 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 //import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri'
 const TasksView = ({ tasks, deleteTask }) => {
-  
-  
     return (
       <div>
         <div className="all-tasks">
           <div className="header">
             <h1>Manage Tasks</h1>
             <div className="notice">
-              <h4>Click on Task description to edit</h4>
             </div>
           </div>
           <div>
@@ -34,6 +31,8 @@ const TasksView = ({ tasks, deleteTask }) => {
                         </Link>
                       </td>
                       <td>{task.completion_status}</td>
+                      <td>{task.due_date}</td>
+                      <td>{task.comments}</td>
                       <td>
                         <div className="action-button-wrap">
                           <button
