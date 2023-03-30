@@ -41,6 +41,7 @@ export const addTask = (task) => {
   };
 };
 
+
 //fetch employee 
 export const fetchAllEmployees = (employees) => {
   return {
@@ -48,6 +49,22 @@ export const fetchAllEmployees = (employees) => {
     payload: employees
   }
 }
+// fetch single employee
+export const fetchEmployee = (employee) => {
+  return {
+    type: at.FETCH_EMPLOYEE,
+    payload: employee
+  }
+}
+
+//Add Employee
+export const addEmployee = (employee) => {
+  return {
+    type: at.ADD_EMPLOYEE,
+    payload: employee,
+  };
+};
+
 
 
 //Delete employee 
