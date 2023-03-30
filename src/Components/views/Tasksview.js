@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-//import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri'
+import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri'
 const TasksView = ({ tasks, deleteTask }) => {
     return (
       <div>
@@ -39,6 +39,7 @@ const TasksView = ({ tasks, deleteTask }) => {
                             onClick={() => deleteTask(task.id)}
                             className="delete-button"
                           >
+                            <RiDeleteBin2Line size={20} />
                           </button>
   
                           <Link className="link" to={`/tasks/${task.id}`}>
@@ -49,6 +50,7 @@ const TasksView = ({ tasks, deleteTask }) => {
                                 padding: '3px', 
                                 borderRadius: '5px'}}
                               >
+                                <RiEdit2Line size={20} />
                             </button>
                           </Link>
                         </div>

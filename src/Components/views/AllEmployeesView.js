@@ -62,7 +62,7 @@ const AllEmployeesView = ({ employees, deleteEmployee }) => {
                         onClick={() => deleteEmployee(employee.id)}
                         className="delete-button"
                       >
-                        <RiDeleteBin2Line size={20} />
+                     <RiDeleteBin2Line size={20} />
                       </button>
 
                       <Link className="link" to={`/employees/${employee.id}`}>
