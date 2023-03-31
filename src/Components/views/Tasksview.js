@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri'
 const TasksView = ({ tasks, deleteTask }) => {
+  const navigate = useHistory()
     return (
       <div>
         <div className="all-tasks">

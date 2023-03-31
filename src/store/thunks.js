@@ -46,3 +46,14 @@ export const deleteTaskThunk = taskId => async dispatch => {
     console.error(err);
   }
 };
+// Add task
+export const addTaskThunk = task => async dispatch => {
+  try {
+    let res = await axios.post(`${path}/tasks`, task);
+    // delete succesful so change state with dispatch
+    dispatch(ac.addTask(res.data));
+    return res.data
+  } catch(err) {
+    console.error(err);
+  }
+};
