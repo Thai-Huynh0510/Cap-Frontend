@@ -33,7 +33,6 @@ const AllEmployeesView = ({ employees, deleteEmployee }) => {
         <div className="header">
           <h1>Manage Employees</h1>
           <div className="notice">
-            <h4>Click on employee first name to edit.</h4>
           </div>
         </div>
         <table>
@@ -48,14 +47,16 @@ const AllEmployeesView = ({ employees, deleteEmployee }) => {
             {employees.map(employee => {
               return (
                 <tr key={employee.id}>
-                  <td>{employee.id}</td>
+                  <td><div className="center">{employee.id} </div></td>
                   <td>
+                  <div className="center">
                     <Link className="link" to={`/employees/${employee.id}`}>
                       {employee.first_name}
                     </Link>
+                    </div>
                   </td>
-                  <td>{employee.last_name}</td>
-                  <td>{employee.department}</td>
+                  <td><div className="center">{employee.last_name}</div></td>
+                  <td><div className="center">{employee.department}</div></td>
                   <td>
                     <div className="action-button-wrap">
                       <button
