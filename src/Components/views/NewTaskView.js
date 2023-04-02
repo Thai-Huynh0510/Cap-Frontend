@@ -1,10 +1,11 @@
 import React from "react";
-
+import NavBar from "../NavBar";
 const NewTaskView = (props) => {
     const { handleChange, handleSubmit } = props
   
     return (
       <div>
+        <NavBar />
         <div className="edit-wrapper">
           <h1>Add New Task</h1>
           <form onSubmit={(e) => handleSubmit(e)}>
@@ -43,14 +44,14 @@ const NewTaskView = (props) => {
               </div>
               <br />
 
-              <div className="input-wrapper">
+              <div className="input-wrapper1">
                 <label className="edit-form-label">Comments: </label>
                 <input
                   type="text"
                   name="comments"
                   required="required"
                   minLength={3}
-                  maxLength={20}
+                  maxLength={200}
                   onChange={(e) => handleChange(e)} />
               </div>
               <br/>

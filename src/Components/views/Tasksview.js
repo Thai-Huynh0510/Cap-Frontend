@@ -1,10 +1,30 @@
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri'
+import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri';
+import NavBar from "../NavBar";
 const TasksView = ({ tasks, deleteTask }) => {
   const navigate = useHistory()
+  if (!tasks.length) {
+    return (
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: '6rem',
+        flexDirection: 'column'
+      }}>
+        <h2>There are no tasks.</h2>
+        <Link to={`/newtask`}>
+          <button>
+            Add Task
+          </button>
+        </Link>
+      </div>
+    );
+  }
     return (
       <div>
+        <NavBar />
         <div className="all-tasks">
           <div className="header">
             <h1>Manage Tasks</h1>
@@ -25,14 +45,21 @@ const TasksView = ({ tasks, deleteTask }) => {
                 {tasks.map(task => {
                   return (
                     <tr key={task.id}>
-                      <td>{task.id}</td>
+                      <td>
+                        <div className="center">
+                        {task.id}
+                        </div>
+                      </td>  
                       <td>
                         <Link className="link" to={`/tasks/${task.id}`}>
                           {task.description}
                         </Link>
                       </td>
-                      <td>{task.completion_status}</td>
-                      <td>{task.due_date}</td>
+                      <td><div className="center">
+                        {task.completion_status}
+                        </div></td>
+                      <td><div className="center">
+                        {task.due_date} </div></td>
                       <td>{task.comments}</td>
                       <td>
                         <div className="action-button-wrap">
@@ -55,7 +82,7 @@ const TasksView = ({ tasks, deleteTask }) => {
                             </button>
                           </Link>
                         </div>
-  
+                      
                       </td>
                     </tr>
                   )
