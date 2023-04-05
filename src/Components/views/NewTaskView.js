@@ -47,9 +47,11 @@ const NewTaskView = (props) => {
               <div className="input-wrapper1">
                 <label className="edit-form-label">Comments: </label>
                 <input
-                  type="text"
+                  type="textarea"
                   name="comments"
                   required="required"
+                  rows="5"
+                  cols="40"
                   minLength={3}
                   maxLength={200}
                   onChange={(e) => handleChange(e)} />
