@@ -70,7 +70,7 @@ const TasksView = ({ tasks, deleteTask }) => {
                             <RiDeleteBin2Line size={20} />
                           </button>
   
-                          <Link className="link" to={`/tasks/${task.id}`}>
+                          <Link className="link" to={`edittask/${task.id}`}>
                             <button
                               style={{ 
                                 backgroundColor: '#0818A8', 
