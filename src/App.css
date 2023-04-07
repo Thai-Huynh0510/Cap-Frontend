@@ -168,3 +168,18 @@ form {
 .nav-wrap li a:hover {
   opacity: 0.5;
 }
+.single-task {
+  margin: 0px 20px;
+}
+/* Notice message */
+.notice {
+  border: 1px solid mediumblue;
+  margin-bottom: 1rem;
+  width: fit-content;
+  display: inline-table;
+  border-radius: 10px;
+  padding: 0px 0.5rem;
+  margin-top: -8px;
+  background-color: #e8f4f8;
+  color: mediumblue;
+}
