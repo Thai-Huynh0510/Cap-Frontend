@@ -1,9 +1,8 @@
-import { useHistory } from "react-router-dom";
+
 import { Link } from "react-router-dom";
-import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri';
+import { RiDeleteBin2Line } from 'react-icons/ri';
 import NavBar from "../NavBar";
 const TasksView = ({ tasks, deleteTask }) => {
-  const navigate = useHistory()
   if (!tasks.length) {
     return (
       <div style={{
@@ -69,18 +68,6 @@ const TasksView = ({ tasks, deleteTask }) => {
                           >
                             <RiDeleteBin2Line size={20} />
                           </button>
-  
-                          <Link className="link" to={`edittask/${task.id}`}>
-                            <button
-                              style={{ 
-                                backgroundColor: '#0818A8', 
-                                width: '3rem', 
-                                padding: '3px', 
-                                borderRadius: '5px'}}
-                              >
-                                <RiEdit2Line size={20} />
-                            </button>
-                          </Link>
                         </div>
                       
                       </td>
