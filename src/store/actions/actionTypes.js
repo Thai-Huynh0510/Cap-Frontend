@@ -14,3 +14,11 @@ export const ADD_TASK = "ADD_TASK";
 export const DELETE_TASK = "DELETE_TASK";
 // Single Task
 export const FETCH_TASK = "FETCH_TASK";
+
+// Orders
+
+export const FETCH_ALL_ORDERS = "FETCH_ALL_ORDERS";
+export const EDIT_ORDER = "EDIT_ORDER";
+export const ADD_ORDER = "ADD_ORDER";
+export const DELETE_ORDER = "DELETE_ORDER";
+export const FETCH_ORDER = "FETCH_ORDER";
