@@ -74,3 +74,40 @@ export const deleteEmployee = (employeeId) => {
     payload: employeeId,
   };
 };
+
+// Orders
+// All orders
+export const fetchAllOrders = (orders) => {
+  return {
+    type: at.FETCH_ALL_ORDERS,
+    payload: orders
+  }
+}
+// Single task
+export const fetchOrder = (order) => {
+  return {
+    type: at.FETCH_ORDER,
+    payload: order
+  }
+}
+// Edit task
+export const editOrder = (order) => {
+  return {
+    type: at.EDIT_ORDER,
+    payload: order
+  }
+}
+// Delete Task
+export const deleteOrder = (orderId) => {
+  return {
+    type: at.DELETE_ORDER,
+    payload: orderId
+  };
+};
+// Add Task
+export const addOrder = (order) => {
+  return {
+    type: at.ADD_ORDER,
+    payload: order
+  };
+};

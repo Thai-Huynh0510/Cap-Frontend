@@ -85,3 +85,51 @@ export const editTaskThunk = (task) => async (dispatch) => {
     console.log(error)
   }
 }
+
+
+// All orders
+export const fetchAllOrdersThunk = () => async (dispatch) => {
+  try {
+    let res = await axios.get(`${path}/orders`)
+    dispatch(ac.fetchAllOrders(res.data))
+  } catch(error) {
+    console.log(error)
+  }
+}
+// Single order
+export const fetchOrderThunk = (id) => async (dispatch) => {
+  try {
+    let res = await axios.get(`${path}/orders/${id}`)
+    dispatch(ac.fetchOrder(res.data))
+  } catch(error) {
+    console.log(error)
+  }
+  }
+// Add order
+export const addOrderThunk = order => async dispatch => {
+try {
+  let res = await axios.post(`${path}/orders`, order);
+  dispatch(ac.addOrder(res.data));
+  return res.data
+} catch(err) {
+  console.error(err);
+}
+};
+// Edit order
+export const editOrderThunk = (order) => async (dispatch) => {
+try {
+  let res = await axios.put(`${path}/orders/${order.id}`, order)
+  dispatch(ac.editOrder(res.data))
+} catch (error) {
+  console.log(error)
+}
+}
+// delete order
+export const deleteOrderThunk = orderId => async dispatch => {
+  try {
+    await axios.delete(`${path}/orders/${orderId}`);
+    dispatch(ac.deleteOrder(orderId));
+  } catch(err) {
+    console.error(err);
+  }
+  };
