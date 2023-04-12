@@ -1,31 +1,14 @@
 import { Link } from "react-router-dom";
 import { RiDeleteBin2Line } from 'react-icons/ri';
 import NavBar from "../NavBar";
-const TasksView = ({ tasks, deleteTask }) => {
-  if (!tasks.length) {
-    return (
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        margin: '6rem',
-        flexDirection: 'column'
-      }}>
-        <h2>There are no tasks.</h2>
-        <Link to={`/newtask`}>
-          <button>
-            Add Task
-          </button>
-        </Link>
-      </div>
-    );
-  }
+const OrdersView = ({ orders, deleteOrder }) => {
+
     return (
       <div>
         <NavBar />
         <div className="all-tasks">
           <div className="header">
-            <h1>Manage Tasks</h1>
+            <h1>Manage Orders</h1>
             <div className="notice">
             </div>
           </div>
@@ -33,36 +16,33 @@ const TasksView = ({ tasks, deleteTask }) => {
             <table>
               <tbody>
                 <tr>
-                  <th>Tasks</th>
-                  <th>Description</th>
-                  <th>Status</th>
+                  <th>Detail</th>
+                  <th>Request</th>
+                  <th>Customer</th>
                   <th>Due Date</th>
-                  <th>Comments</th>
                   <th>Actions</th>
                 </tr>
-                {tasks.map(task => {
+                {orders.map(order => {
                   return (
-                    <tr key={task.id}>
+                    <tr key={order.id}>
                       <td>
                         <div className="center">
-                        {task.id}
+                        {order.id}
                         </div>
                       </td>  
                       <td>
-                        <Link className="link" to={`/tasks/${task.id}`}>
-                          {task.description}
-                        </Link>
+                        {order.detail}
                       </td>
                       <td><div className="center">
-                        {task.completion_status}
+                        {order.request}
                         </div></td>
                       <td><div className="center">
-                        {task.due_date} </div></td>
-                      <td>{task.comments}</td>
+                        {order.customer} </div></td>
+                      <td>{order.order_due_date}</td>
                       <td>
                         <div className="action-button-wrap">
                           <button
-                            onClick={() => deleteTask(task.id)}
+                            onClick={() => deleteOrder(order.id)}
                             className="delete-button"
                           >
                             <RiDeleteBin2Line size={20} />
@@ -79,15 +59,14 @@ const TasksView = ({ tasks, deleteTask }) => {
         </div>
   
         <div className="buttons-wrap">
-          <Link to={`/newtask`}>
+          <Link to={`/newOrder`}>
             <button>
-              Add New Task
+              Add New Order
             </button>
           </Link>
         </div>
-        
       </div>
     )
   }
   
-  export default TasksView
+  export default OrdersView
