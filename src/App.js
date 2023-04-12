@@ -8,6 +8,7 @@ import NewTask from './Components/NewTask';
 import NewEmployees from './Components/NewEmployee';
 import EditTask from './Components/EditTask';
 import Task from './Components/Task';
+import Orders from './Components/Orders'
 const App = () => {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ const App = () => {
       <Route exact path="/newtask" component={NewTask} />
       <Route exact path="/newemployee" component={NewEmployees}/>
       <Route exact path="/edittask/:id" component={EditTask}/>
+      <Route exact path="/orders" component={Orders}/>
       </Switch>
     </div>
   );
