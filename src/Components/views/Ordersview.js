@@ -16,6 +16,7 @@ const OrdersView = ({ orders, deleteOrder }) => {
             <table>
               <tbody>
                 <tr>
+                  <th>Order Id</th>
                   <th>Detail</th>
                   <th>Request</th>
                   <th>Customer</th>
@@ -33,12 +34,10 @@ const OrdersView = ({ orders, deleteOrder }) => {
                       <td>
                         {order.detail}
                       </td>
-                      <td><div className="center">
-                        {order.request}
-                        </div></td>
+                      <td>{order.request}</td>
                       <td><div className="center">
                         {order.customer} </div></td>
-                      <td>{order.order_due_date}</td>
+                      <td><div className="center">{order.order_due_date}</div></td>
                       <td>
                         <div className="action-button-wrap">
                           <button
@@ -48,7 +47,6 @@ const OrdersView = ({ orders, deleteOrder }) => {
                             <RiDeleteBin2Line size={20} />
                           </button>
                         </div>
-                      
                       </td>
                     </tr>
                   )
