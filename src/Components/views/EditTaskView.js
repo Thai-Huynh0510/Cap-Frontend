@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import NavBar from "../NavBar";
 
 const EditTaskView = (props) => {
@@ -42,7 +42,7 @@ const EditTaskView = (props) => {
             <div className="input-wrapper">
               <label className="edit-form-label">Due Date: </label>
               <input
-                type="text"
+                type="date"
                 name="due_date"
                 required="required"
                 value={task.due_date}
@@ -74,6 +74,7 @@ const EditTaskView = (props) => {
                 type="text"
                 name="comments"
                 required="required"
+                placeholder="line&#13;&#10;line2"
                 value={task.comments}
                 minLength={3}
                 maxLength={200}
