@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../NavBar";
 const NewTaskView = (props) => {
     const { handleChange, handleSubmit } = props
-  
+
     return (
       <div>
         <NavBar />
@@ -15,6 +15,7 @@ const NewTaskView = (props) => {
                 <input
                   type="text"
                   name="description"
+                  placeholder="description..."
                   required
                   minLength={5}
                   maxLength={30}
@@ -35,7 +36,7 @@ const NewTaskView = (props) => {
               <div className="input-wrapper">
                 <label className="edit-form-label">Due date: </label>
                 <input
-                  type="text"
+                  type="date"
                   name="due_date"
                   required="required"
                   minLength={3}
@@ -47,11 +48,11 @@ const NewTaskView = (props) => {
               <div className="input-wrapper1">
                 <label className="edit-form-label">Comments: </label>
                 <input
-                  type="textarea"
+                  type="text"
                   name="comments"
                   required="required"
-                  rows="5"
-                  cols="40"
+                  placeholder="Enter comments..."
+                  multiline= {true}
                   minLength={3}
                   maxLength={200}
                   onChange={(e) => handleChange(e)} />
@@ -62,7 +63,6 @@ const NewTaskView = (props) => {
                   Submit
                 </button>
               </div>
-  
             </div>
           </form>
         </div>
