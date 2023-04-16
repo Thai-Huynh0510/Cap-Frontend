@@ -30,7 +30,7 @@ class NewTask extends Component {
           [event.target.name]: event.target.value
         })
     }
-    handleSubmit = async event => {
+    handleSubmit = async event => {   
         event.preventDefault()
         let task = {
           description: this.state.description,

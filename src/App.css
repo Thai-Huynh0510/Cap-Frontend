@@ -104,18 +104,18 @@ td {
 }
 .input-wrapper {
   display: grid;
+  white-space: pre-wrap;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
+  white-space: pre-line;
   overflow: hidden;
 }
 .input-wrapper1 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  grid-template-columns: 1fr 2fr;
   line-height: 2em;
   height: 4em;
-  white-space: nowrap;
   width: 100%;
 }
 form {
