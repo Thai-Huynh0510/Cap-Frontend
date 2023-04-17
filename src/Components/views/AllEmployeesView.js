@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import NavBar from "../NavBar";
-import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri'
-
+import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri';
+import {BsPersonFillAdd} from "react-icons/bs";
 const AllEmployeesView = ({ employees, deleteEmployee }) => {
 
   if (!employees.length) {
@@ -90,7 +90,8 @@ const AllEmployeesView = ({ employees, deleteEmployee }) => {
         <div className="edit">
           <Link to={`/newemployee`}>
             <button>
-              Add New Employee
+              Add New Employee {" "}
+              <BsPersonFillAdd/>
             </button>
           </Link>
         </div>

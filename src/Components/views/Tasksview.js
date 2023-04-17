@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { RiDeleteBin2Line } from 'react-icons/ri';
+import {MdOutlineAddTask} from "react-icons/md";
 import NavBar from "../NavBar";
 const TasksView = ({ tasks, deleteTask }) => {
   if (!tasks.length) {
@@ -81,7 +82,8 @@ const TasksView = ({ tasks, deleteTask }) => {
         <div className="buttons-wrap">
           <Link to={`/newtask`}>
             <button>
-              Add New Task
+              Add New Task {" "}
+              <MdOutlineAddTask />
             </button>
           </Link>
         </div>
