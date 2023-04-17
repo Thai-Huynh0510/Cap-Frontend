@@ -106,7 +106,7 @@ export const fetchOrderThunk = (id) => async (dispatch) => {
   }
   }
 // Add order
-export const addOrderThunk = order => async dispatch => {
+export const addOrderThunk = (order) => async (dispatch) => {
 try {
   let res = await axios.post(`${path}/orders`, order);
   dispatch(ac.addOrder(res.data));

@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar";
+
 const NewOrderView = (props) => {
     const { handleChange, handleSubmit } = props
   
