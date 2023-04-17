@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { RiDeleteBin2Line } from 'react-icons/ri';
+import {AiOutlineFileAdd} from "react-icons/ai"
 import NavBar from "../NavBar";
 const OrdersView = ({ orders, deleteOrder }) => {
 
@@ -59,7 +60,8 @@ const OrdersView = ({ orders, deleteOrder }) => {
         <div className="buttons-wrap">
           <Link to={`/newOrder`}>
             <button>
-              Add New Order
+              Add New Order {" "}
+              <AiOutlineFileAdd />
             </button>
           </Link>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar";
+import {MdOutlineAddTask} from "react-icons/md"
 const NewTaskView = (props) => {
     const { handleChange, handleSubmit } = props
 
@@ -52,6 +53,7 @@ const NewTaskView = (props) => {
                   name="comments"
                   required="required"
                   placeholder="Enter comments..."
+                  style = {{ whiteSpace: "pre-line" }}
                   multiline= {true}
                   minLength={3}
                   maxLength={200}
@@ -60,7 +62,7 @@ const NewTaskView = (props) => {
               <br/>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <button type="submit">
-                  Submit
+                  Submit <MdOutlineAddTask />
                 </button>
               </div>
             </div>
