@@ -26,6 +26,16 @@ export const addEmployeeThunk = (employee) => async (dispatch) => {
   }
 };
 
+// Single employee
+export const fetchEmployeeThunk = (id) => async (dispatch) => {
+  try {
+    let res = await axios.get(`${path}/employees/${id}`)
+    dispatch(ac.fetchEmployee(res.data))
+  } catch(error) {
+    console.log(error)
+  }
+}
+
 // Delete Employees 
 export const deleteEmployeeThunk = employeeId => async dispatch => {
   try {
