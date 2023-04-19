@@ -47,7 +47,6 @@ const EmployeeView = (props) => {
           <tbody>
             <tr>
               <th>Task Description</th>
-              <th>Priority Level</th>
               <th>Status</th>
               <th>Actions</th>
             </tr>
@@ -61,7 +60,7 @@ const EmployeeView = (props) => {
                       {task.description}
                     </Link>
                   </td>
-                  <td>{task.priority_level}</td>
+
                   <td>{task.completion_status}</td>
                   <td>
                     <button className="delete-button"

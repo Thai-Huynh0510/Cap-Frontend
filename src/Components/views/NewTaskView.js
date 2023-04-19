@@ -28,6 +28,7 @@ const NewTaskView = (props) => {
                 <input
                   type="text"
                   name="completion_status"
+                  placeholder="completion status..."
                   required
                   minLength={5}
                   maxLength={20}
@@ -60,6 +61,7 @@ const NewTaskView = (props) => {
                   onChange={(e) => handleChange(e)} />
               </div>
               <br/>
+              
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <button type="submit">
                   Submit <MdOutlineAddTask />
