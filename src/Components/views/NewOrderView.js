@@ -13,26 +13,26 @@ const NewOrderView = (props) => {
             <div>
               <div className="input-wrapper1">
                 <label className="edit-form-label">Detail: </label>
-                <input
-                  type="textarea"
+                <textarea
                   name="detail"
                   placeholder="Enter detail..."
                   required
                   minLength={5}
                   maxLength={300}
-                  onChange={(e) => handleChange(e)} />
+                  onChange={(e) => handleChange(e)}
+                ></textarea>
               </div>
               <br />
               <div className="input-wrapper1">
                 <label className="edit-form-label">Request: </label>
-                <input
-                  type="textarea"
+                <textarea
                   name="request"
                   placeholder="Enter request..."
                   required
                   minLength={5}
                   maxLength={500}
-                  onChange={(e) => handleChange(e)} />
+                  onChange={(e) => handleChange(e)} 
+                ></textarea>
               </div>
               <br/>
               <div className="input-wrapper">

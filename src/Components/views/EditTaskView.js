@@ -70,15 +70,15 @@ const EditTaskView = (props) => {
             <br />
             <div className="input-wrapper1">
               <label className="edit-form-label">Comments: </label>
-              <input
-                type="text"
+              <textarea
                 name="comments"
                 required="required"
                 placeholder="line&#13;&#10;line2"
                 value={task.comments}
                 minLength={3}
                 maxLength={200}
-                onChange={(e) => handleChange(e)} />
+                onChange={(e) => handleChange(e)}
+              ></textarea>
             </div>
             <br />
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
