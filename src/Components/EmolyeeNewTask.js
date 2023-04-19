@@ -10,8 +10,9 @@ class EmployeeNewTask extends Component {
     this.state = {
       // id: this.props.employee.id,
       description: "",
-      priority_level: "",
+      comments: "",
       completion_status: "",
+      due_date: "",
       employeeId: this.props.employee.id,
       redirect: false,
       redirectId: null,
@@ -23,8 +24,9 @@ class EmployeeNewTask extends Component {
     this.props.fetchEmployee(this.props.match.params.id)
     this.setState({
       description: this.props.description,
-      priority_level: this.props.priority_level,
-      completion_status: this.props.completion_status
+      due_date: this.props.due_date,
+      comments: this.props.comments,
+      completion_status: this.props.completion_status,
     })
   }
 
@@ -40,7 +42,8 @@ class EmployeeNewTask extends Component {
     let newTask = {
       // id: this.state.id,
       description: this.state.description,
-      priority_level: this.state.priority_level,
+      due_date: this.state.due_date,
+      comments: this.state.comments,
       completion_status: this.state.completion_status,
       employeeId: this.props.employee.id,
     }
@@ -49,7 +52,8 @@ class EmployeeNewTask extends Component {
 
     this.setState({
       description: this.state.description,
-      priority_level: this.state.priority_level,
+      due_date: this.state.due_date,
+      comments: this.state.comments,
       completion_status: this.state.completion_status,
       employeeId: this.props.employee.id,
       redirect: true,

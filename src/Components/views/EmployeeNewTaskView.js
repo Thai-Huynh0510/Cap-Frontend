@@ -4,7 +4,6 @@ import NavBar from "../NavBar";
 const EmployeeNewTaskView = (props) => {
   const { employee, handleChange, handleSubmit } = props
 
-  console.log('employeeeee', employee.first_name)
   return (
     <div>
       <NavBar />
@@ -17,21 +16,10 @@ const EmployeeNewTaskView = (props) => {
               <input
                 type="text"
                 name="description"
+                placeholder="description..."
                 required
                 minLength={5}
                 maxLength={30}
-                onChange={(e) => handleChange(e)} />
-            </div>
-            <br />
-
-            <div className="input-wrapper">
-              <label className="edit-form-label">Priority Level: </label>
-              <input
-                type="text"
-                name="priority_level"
-                required="required"
-                minLength={3}
-                maxLength={20}
                 onChange={(e) => handleChange(e)} />
             </div>
             <br />
@@ -41,12 +29,40 @@ const EmployeeNewTaskView = (props) => {
               <input
                 type="text"
                 name="completion_status"
+                placeholder="completion status..."
                 required
                 minLength={5}
                 maxLength={20}
                 onChange={(e) => handleChange(e)} />
             </div>
             <br />
+
+            <div className="input-wrapper">
+                <label className="edit-form-label">Due date: </label>
+                <input
+                  type="date"
+                  name="due_date"
+                  required="required"
+                  minLength={3}
+                  maxLength={20}
+                  onChange={(e) => handleChange(e)} />
+              </div>
+              <br />
+
+              <div className="input-wrapper1">
+                <label className="edit-form-label">Comments: </label>
+                <input
+                  type="text"
+                  name="comments"
+                  required="required"
+                  placeholder="Enter comments..."
+                  style = {{ whiteSpace: "pre-line" }}
+                  multiline= {true}
+                  minLength={3}
+                  maxLength={200}
+                  onChange={(e) => handleChange(e)} />
+              </div>
+              <br/>
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <button type="submit">
