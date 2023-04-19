@@ -36,6 +36,16 @@ export const fetchEmployeeThunk = (id) => async (dispatch) => {
   }
 }
 
+// Edit employee
+export const editEmployeeThunk = (employee) => async (dispatch) => {
+  try {
+    let res = await axios.put(`${path}/employees/${employee.id}`, employee)
+    dispatch(ac.editEmployee(res.data))
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 // Delete Employees 
 export const deleteEmployeeThunk = employeeId => async dispatch => {
   try {

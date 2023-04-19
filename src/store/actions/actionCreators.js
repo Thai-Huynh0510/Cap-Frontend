@@ -65,7 +65,13 @@ export const addEmployee = (employee) => {
   };
 };
 
-
+// Edit employee
+export const editEmployee = (employee) => {
+  return {
+    type: at.EDIT_EMPLOYEE,
+    payload: employee
+  }
+}
 
 //Delete employee 
 export const deleteEmployee = (employeeId) => {
