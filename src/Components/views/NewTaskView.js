@@ -49,12 +49,11 @@ const NewTaskView = (props) => {
 
               <div className="input-wrapper1">
                 <label className="edit-form-label">Comments: </label>
-                <input
+                <textarea
                   type="text"
                   name="comments"
                   required="required"
                   placeholder="Enter comments..."
-                  style = {{ whiteSpace: "pre-line" }}
                   multiline= {true}
                   minLength={3}
                   maxLength={200}

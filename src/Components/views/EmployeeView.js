@@ -48,6 +48,8 @@ const EmployeeView = (props) => {
             <tr>
               <th>Task Description</th>
               <th>Status</th>
+              <th>Due Date</th>
+              <th>Comments</th>
               <th>Actions</th>
             </tr>
 
@@ -60,8 +62,11 @@ const EmployeeView = (props) => {
                       {task.description}
                     </Link>
                   </td>
-
-                  <td>{task.completion_status}</td>
+                  <td><div className="center">
+                    {task.completion_status}</div></td>
+                  <td><div className="center">
+                    {task.due_date}</div></td>
+                  <td>{task.comments}</td>
                   <td>
                     <button className="delete-button"
                       onClick={() => clickDelete(task)}>

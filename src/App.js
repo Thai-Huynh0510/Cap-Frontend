@@ -6,7 +6,7 @@ import Tasks from './Components/Tasks';
 import Employees from './Components/Employees'; // done
 import Employee from './Components/Employee'; // done
 import EditEmployee from './Components/EditEmployee'; // done
-import EmployeeNewTask from './Components/EmolyeeNewTask';
+import EmployeeNewTask from './Components/EmployeeNewTask';
 import NewEmployees from './Components/NewEmployee'; //done
 import NewTask from './Components/NewTask';
 import EditTask from './Components/EditTask';

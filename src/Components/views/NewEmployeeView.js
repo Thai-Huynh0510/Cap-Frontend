@@ -1,12 +1,10 @@
 import React from "react"
-import { useState } from "react"
-import { Link } from "react-router-dom";
 import NavBar from "../NavBar";
-import NewEmployee from "../NewEmployee";
+
 
 const NewEmployeeView = (props) => {
 
-  const { error, handleChange, handleSubmit } = props
+  const { handleChange, handleSubmit } = props
 
   return (
     <div>
