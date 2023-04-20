@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import NavBar from "../NavBar";
-import { RiDeleteBin2Line, RiEdit2Line } from 'react-icons/ri';
+import { RiDeleteBin2Line} from 'react-icons/ri';
 import {BsPersonFillAdd} from "react-icons/bs";
 const AllEmployeesView = ({ employees, deleteEmployee }) => {
 
@@ -65,19 +65,6 @@ const AllEmployeesView = ({ employees, deleteEmployee }) => {
                       >
                      <RiDeleteBin2Line size={20} />
                       </button>
-
-                      <Link className="link" to={`/employees/${employee.id}`}>
-                        <button
-                          style={{
-                            backgroundColor: '#0818A8',
-                            width: '3rem',
-                            padding: '3px',
-                            borderRadius: '5px'
-                          }}
-                        >
-                          <RiEdit2Line size={20} />
-                        </button>
-                      </Link>
                     </div>
                   </td>
                 </tr>
