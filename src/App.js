@@ -13,6 +13,7 @@ import EditTask from './Components/EditTask';
 import Task from './Components/Task';
 import Orders from './Components/Orders'
 import NewOrder from './Components/NewOrder';
+import EditOrder from './Components/EditOrder';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
       <Route exact path="/employees/:id/newtask" component={EmployeeNewTask} />
       <Route exact path="/newtask" component={NewTask} />
       <Route exact path="/edittask/:id" component={EditTask}/>
+      <Route exact path="/editorder/:id" component={EditOrder}/>
       <Route exact path="/orders" component={Orders}/>
       <Route exact path="/neworder" component={NewOrder}/>
       </Switch>
