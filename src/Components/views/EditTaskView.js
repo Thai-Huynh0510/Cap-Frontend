@@ -73,7 +73,6 @@ const EditTaskView = (props) => {
               <textarea
                 name="comments"
                 required="required"
-                placeholder="line&#13;&#10;line2"
                 value={task.comments}
                 minLength={3}
                 maxLength={200}

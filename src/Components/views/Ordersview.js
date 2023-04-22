@@ -3,7 +3,6 @@ import { RiDeleteBin2Line } from 'react-icons/ri';
 import {AiOutlineFileAdd} from "react-icons/ai"
 import NavBar from "../NavBar";
 const OrdersView = ({ orders, deleteOrder }) => {
-
     return (
       <div>
         <NavBar />
