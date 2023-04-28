@@ -52,7 +52,6 @@ const EmployeeView = (props) => {
               <th>Comments</th>
               <th>Actions</th>
             </tr>
-
             {employee.tasks.map(task => {
               return (
                 <tr key={task.id}>

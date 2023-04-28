@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchTaskThunk } from "../store/thunks"
+import { fetchOrderThunk, fetchTaskThunk} from "../store/thunks"
 import TaskView from "./views/TaskView";
 
 class Task extends Component {
@@ -10,9 +10,8 @@ class Task extends Component {
   }
 
   render() {
-    console.log('task in container', this.props.task)
     return (
-      <TaskView task={this.props.task}/>
+      <TaskView task={this.props.task} />
     )
   }
 }
@@ -27,7 +26,7 @@ const mapState = (state) => {
 // Map dispatch to props
 const mapDispatch = (dispatch) => {
   return {
-    fetchTask: (id) => dispatch(fetchTaskThunk(id))
+    fetchTask: (id) => dispatch(fetchTaskThunk(id)),
   }
 }
 

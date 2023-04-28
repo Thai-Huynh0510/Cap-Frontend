@@ -1,7 +1,8 @@
 import { FETCH_TASK } from "../actions/actionTypes"
 
 const initialState = {
-  employee: {}
+  employee: {},
+  order: {},
 }
 
 // REDUCER

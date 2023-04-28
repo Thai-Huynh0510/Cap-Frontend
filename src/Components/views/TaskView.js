@@ -9,7 +9,6 @@ const TaskView = ({ task }) => {
   const clickEdit = () => {
     navigate.push(`/edittask/${task.id}`)
   }
-
   return (
     <div>
       <NavBar />
@@ -60,6 +59,48 @@ const TaskView = ({ task }) => {
             </tbody>
           </table>
         </div>
+      </div>
+      <div className="single-order">
+        <h1 style={{ textAlign: 'center' }}>Order</h1>
+        <table>
+          <tbody>
+            <tr>
+              <th>Detail</th>
+              <th>Request</th>
+              <th>Due Date</th>
+              <th>Customer</th>
+              <th>Actions</th>
+            </tr>
+            {Array.isArray(task.orders)
+  ? task.orders.map(order => {
+              return (
+                <tr key={order.orderId}>
+
+                  <td>
+                      {order.detail} 
+                  </td>
+                  <td><div className="center">
+                    {order.request}</div></td>
+                  <td><div className="center">
+                    {order.order_due_date}</div></td>
+                  <td>{order.customer}</td>
+                  <td>
+                    <button 
+                      style={{ 
+                        backgroundColor: '#0818A8', 
+                        width: '3rem', 
+                        padding: '3px', 
+                        borderRadius: '5px'}}>
+                        <RiEdit2Line size={20} />
+                    </button>
+                  </td>
+                </tr>
+              )
+            }): <p>No orders found.</p>}
+            
+
+          </tbody>
+        </table>
       </div>
     </div>
   )

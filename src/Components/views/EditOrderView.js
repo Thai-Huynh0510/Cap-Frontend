@@ -44,7 +44,7 @@ const EditOrderView = (props) => {
                 type="date"
                 name="order_due_date"
                 required="required"
-                value={order.due_date}
+                value={order.order_due_date}
                 minLength={3}
                 maxLength={20}
                 onChange={(e) => handleChange(e)} />

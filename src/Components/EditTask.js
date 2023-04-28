@@ -14,6 +14,7 @@ class EditTask extends Component {
       due_date: this.props.task.due_date,
       comments: this.props.task.comments,
       employeeId: this.props.task.employeeId,
+      orderId: this.props.task.orderId,
       redirect: false,
       redirectId: null,
       error: ""
@@ -45,7 +46,8 @@ class EditTask extends Component {
       completion_status: this.state.completion_status,
       due_date: this.state.due_date,
       comments: this.state.comments,
-      employeeId: this.state.employeeId
+      employeeId: this.state.employeeId,
+      orderId: this.state.orderId,
     }
 
     let editedTask = await this.props.editTask(task)
@@ -56,6 +58,7 @@ class EditTask extends Component {
       due_date: this.state.due_date,
       comments: this.state.comments,
       employeeId: null,
+      orderId: null,
       redirect: true,
       redirectId: task.id,
       error: ""

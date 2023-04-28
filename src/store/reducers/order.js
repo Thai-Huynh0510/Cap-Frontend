@@ -1,7 +1,7 @@
 import { FETCH_ORDER } from "../actions/actionTypes"
 
 const initialState = {
-  task: []
+  tasks: [],
 }
 
 // REDUCER
