@@ -22,7 +22,7 @@ const OrderView = ({ order }) => {
                 <th>Customer</th>
                 <th>Actions</th>
               </tr>
-                <tr>
+              <tr>
                 <td>{order.detail}</td>
                     <td>
                       {order.request}</td>
@@ -40,7 +40,7 @@ const OrderView = ({ order }) => {
                           <RiEdit2Line size={20} />
                       </button>
                     </td>
-                  </tr>
+                  </tr>   
             </tbody>
           </table>
         </div>

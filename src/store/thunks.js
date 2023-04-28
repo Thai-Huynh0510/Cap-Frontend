@@ -92,6 +92,9 @@ export const fetchTaskThunk = (id) => async (dispatch) => {
   try {
     let res = await axios.get(`${path}/tasks/${id}`)
     dispatch(ac.fetchTask(res.data))
+    let ordersRes = await axios.get(`${path}/tasks/${id}/orders`);
+    dispatch(ac.fetchOrder(ordersRes.data));
+    console.log(ordersRes.data);
   } catch(error) {
     console.log(error)
   }

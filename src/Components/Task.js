@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchOrderThunk, fetchTaskThunk} from "../store/thunks"
+import {fetchTaskThunk} from "../store/thunks"
 import TaskView from "./views/TaskView";
 
 class Task extends Component {
@@ -11,7 +11,8 @@ class Task extends Component {
 
   render() {
     return (
-      <TaskView task={this.props.task} />
+      <TaskView task={this.props.task} 
+      order = {this.props.order} />
     )
   }
 }
@@ -19,7 +20,7 @@ class Task extends Component {
 // Map state to props
 const mapState = (state) => {
   return {
-    task: state.task
+    task: state.task,
   }
 }
 

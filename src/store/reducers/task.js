@@ -9,7 +9,11 @@ const initialState = {
 const task = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_TASK:
-      return action.payload
+      console.log("Orders data in reducer:", action.payload.orders);
+      return{
+      ...state,
+      ...action.payload, 
+      orders: action.payload.orders}
     default:
       return state
   }
