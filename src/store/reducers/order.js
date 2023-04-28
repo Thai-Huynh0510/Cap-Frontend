@@ -1,14 +1,14 @@
 import { FETCH_ORDER } from "../actions/actionTypes"
 
 const initialState = {
-  task: []
+  tasks: [],
 }
 
 // REDUCER
 const order = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ORDER:
-      return action.payload
+      return action.payload;
     default:
       return state
   }

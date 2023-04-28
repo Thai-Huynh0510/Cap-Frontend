@@ -69,7 +69,7 @@ class EditOrder extends Component {
   render() {
     // Go to single task view of the edited task
     if (this.state.redirect) {
-      return (<Redirect to={`/tasks/${this.state.redirectId}`} />)
+      return (<Redirect to={`/orders/${this.state.redirectId}`} />)
     }
 
     return (

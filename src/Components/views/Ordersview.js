@@ -28,7 +28,9 @@ const OrdersView = ({ orders, deleteOrder }) => {
                     <tr key={order.id}>
                       <td>
                         <div className="center">
+                        <Link className="link" to={`/orders/${order.id}`}>
                         {order.id}
+                        </Link>
                         </div>
                       </td>  
                       <td>

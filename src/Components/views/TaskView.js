@@ -3,13 +3,12 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import NavBar from "../NavBar";
 import { RiEdit2Line } from 'react-icons/ri';
-const TaskView = ({ task }) => {
+  const TaskView = ({ task }) => {
   const navigate = useHistory()
 
   const clickEdit = () => {
     navigate.push(`/edittask/${task.id}`)
   }
-
   return (
     <div>
       <NavBar />
@@ -30,7 +29,6 @@ const TaskView = ({ task }) => {
                 <th>Comments</th>
                 <th>Action</th>
               </tr>
-              <tr>
                 <td>{task.description}</td>
                 <td><div className="center">
                   {task.due_date}
@@ -55,11 +53,40 @@ const TaskView = ({ task }) => {
                                 borderRadius: '5px'}}>
                                 <RiEdit2Line size={20} />
                             </button>
-                          </td>
-              </tr>
+                          </td>           
             </tbody>
           </table>
         </div>
+              <div className="single-order">
+        <h1 style={{ textAlign: 'center' }}>Order</h1>
+        <table>
+          <tbody>
+            <tr>
+              <th>Detail</th>
+              <th>Request</th>
+              <th>Due Date</th>
+              <th>Customer</th>
+            </tr>
+            {Array.isArray(task.orders)
+  ? task.orders.map((order) => {
+              return (
+                <tr key={order.id}>
+                  <td>
+                      {order.detail} 
+                  </td>
+                  <td>
+                    {order.request}</td>
+                  <td><div className="center">
+                    {order.order_due_date}</div></td>
+                  <td>{order.customer}</td>
+                </tr>
+              )
+            }): <p>No orders found</p>}
+            
+
+          </tbody>
+        </table>
+      </div>
       </div>
     </div>
   )

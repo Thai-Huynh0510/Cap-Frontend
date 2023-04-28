@@ -14,7 +14,7 @@ import Task from './Components/Task';
 import Orders from './Components/Orders'
 import NewOrder from './Components/NewOrder';
 import EditOrder from './Components/EditOrder';
-
+import Order from './Components/Order';
 const App = () => {
   return (
     <div className="App">
@@ -31,6 +31,7 @@ const App = () => {
       <Route exact path="/edittask/:id" component={EditTask}/>
       <Route exact path="/editorder/:id" component={EditOrder}/>
       <Route exact path="/orders" component={Orders}/>
+      <Route exact path="/orders/:id" component={Order}/>
       <Route exact path="/neworder" component={NewOrder}/>
       </Switch>
     </div>
