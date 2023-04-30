@@ -68,22 +68,6 @@ const EditTaskView = (props) => {
               />
             </div>
             <br/>
-            <div className="input-wrapper">
-              <label className="edit-form-label">Order ID: </label>
-              <input
-                type="text"
-                name="orderId"
-                required
-                value={task.orderId}
-                onChange={(e) => handleChange(e)}
-                onKeyPress={(event) => {
-                  if (!/[0-9]/.test(event.key)) {
-                    event.preventDefault();
-                  }
-                }}
-              />
-            </div>
-            <br />
             <div className="input-wrapper1">
               <label className="edit-form-label">Comments: </label>
               <textarea

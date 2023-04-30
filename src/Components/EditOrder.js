@@ -13,6 +13,7 @@ class EditOrder extends Component {
       order_due_date: this.props.order.order_due_date,
       request: this.props.order.request,
       customer: this.props.order.customer,
+      taskId: this.props.order.taskId,
       redirect: false,
       redirectId: null,
       error: ""
@@ -67,9 +68,8 @@ class EditOrder extends Component {
   }
 
   render() {
-    // Go to single task view of the edited task
     if (this.state.redirect) {
-      return (<Redirect to={`/orders/${this.state.redirectId}`} />)
+      return (<Redirect to={`/tasks/${this.state.redirectId}`} />)
     }
 
     return (
