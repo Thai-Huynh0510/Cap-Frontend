@@ -63,6 +63,22 @@ const EditOrderView = (props) => {
               />
             </div>
             <br />
+            <div className="input-wrapper">
+              <label className="edit-form-label">Task ID: </label>
+              <input
+                type="text"
+                name="taskId"
+                required
+                value={order.taskId}
+                onChange={(e) => handleChange(e)}
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+              />
+            </div>
+            <br/>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
               <button type="submit">
                 Apply Changes
