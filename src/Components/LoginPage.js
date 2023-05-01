@@ -1,32 +1,18 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
 
 function LoginPage() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const history = useHistory();
-
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    if (username === 'Admin' && password === 'Admin1') {
-      history.push('/homepage');
-    } else {
-      alert('Incorrect username or password');
-    }
-  }
-
   return (
     <div>
       <h1>Login</h1>
-      <form onSubmit={handleFormSubmit}>
+      <form>
         <label>
           Username:
-          <input type="text" name="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input type="text" name="username" />
         </label>
         <br />
         <label>
           Password:
-          <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" name="password" />
         </label>
         <br />
         <button type="submit">Login</button>

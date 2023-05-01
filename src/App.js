@@ -15,7 +15,7 @@ import Orders from './Components/Orders'
 import NewOrder from './Components/NewOrder';
 import EditOrder from './Components/EditOrder';
 import Order from './Components/Order';
-import Calendar from './Components/Calendar';
+import LoginPage from './Components/LoginPage';
 const App = () => {
   // make it so that after login, it takes you to HomePage
   return (
