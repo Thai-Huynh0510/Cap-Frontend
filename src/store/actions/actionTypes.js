@@ -22,3 +22,10 @@ export const EDIT_ORDER = "EDIT_ORDER";
 export const ADD_ORDER = "ADD_ORDER";
 export const DELETE_ORDER = "DELETE_ORDER";
 export const FETCH_ORDER = "FETCH_ORDER";
+
+// Events
+
+export const FETCH_ALL_EVENTS = "FETCH_ALL_EVENTS";
+export const EDIT_EVENT = "EDIT_EVENT";
+export const ADD_EVENT = "ADD_EVENT";
+export const DELETE_EVENT = "DELETE_EVENT";
