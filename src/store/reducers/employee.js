@@ -1,6 +1,5 @@
 
 import { FETCH_EMPLOYEE } from "../actions/actionTypes";
-//import { DELETE_TASK} from "../actions/actionTypes";
 
 const initialState = {
   tasks: [],

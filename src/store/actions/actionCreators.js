@@ -89,31 +89,62 @@ export const fetchAllOrders = (orders) => {
     payload: orders
   }
 }
-// Single task
+// Single order
 export const fetchOrder = (order) => {
   return {
     type: at.FETCH_ORDER,
     payload: order
   }
 }
-// Edit task
+// Edit order
 export const editOrder = (order) => {
   return {
     type: at.EDIT_ORDER,
     payload: order
   }
 }
-// Delete Task
+// Delete order
 export const deleteOrder = (orderId) => {
   return {
     type: at.DELETE_ORDER,
     payload: orderId
   };
 };
-// Add Task
+// Add order
 export const addOrder = (order) => {
   return {
     type: at.ADD_ORDER,
     payload: order
+  };
+};
+
+// Calender
+// All Event
+export const fetchAllEvents = (events) => {
+  return {
+    type: at.FETCH_ALL_EVENTS,
+    payload: events
+  }
+}
+
+// Edit Event
+export const editEvent = (event) => {
+  return {
+    type: at.EDIT_EVENT,
+    payload: event
+  }
+}
+// Delete Event
+export const deleteEvent = (eventId) => {
+  return {
+    type: at.DELETE_EVENT,
+    payload: eventId
+  };
+};
+// Add event
+export const addEvent = (event) => {
+  return {
+    type: at.ADD_EVENT,
+    payload: event
   };
 };

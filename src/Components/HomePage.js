@@ -16,6 +16,9 @@ const Homepage = () =>{
     const handleClickOrders = () =>{
         navigate.push('/orders')
     }
+    const handleClickCalendar = () =>{
+        navigate.push('/events')
+    }
     return (
         <div style={{textAlign: 'center', marginTop: '10rem'}}>
       <h1>Employee Management System</h1>
@@ -31,6 +34,7 @@ const Homepage = () =>{
       <GrTasks color = "blue"/>
       </button>
       </IconContext.Provider>
+      <button onClick={handleClickCalendar}>View Calendar<br/> </button>
     </div>
     )
 }
