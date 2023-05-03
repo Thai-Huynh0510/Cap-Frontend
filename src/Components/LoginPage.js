@@ -16,7 +16,7 @@ function LoginPage() {
   }
 
   return (
-    <div>
+    <div className="edit-wrapper">
       <h1>Login</h1>
       <form onSubmit={handleFormSubmit}>
         <label>
