@@ -15,7 +15,7 @@ import Orders from './Components/Orders'
 import NewOrder from './Components/NewOrder';
 import EditOrder from './Components/EditOrder';
 import Order from './Components/Order';
-import LoginPage from './Components/LoginPage';
+import Calendar from './Components/Calendar';
 const App = () => {
   // make it so that after login, it takes you to HomePage
   return (
@@ -36,6 +36,7 @@ const App = () => {
       <Route exact path="/orders" component={Orders}/>
       <Route exact path="/orders/:id" component={Order}/>
       <Route exact path="/neworder" component={NewOrder}/>
+      <Route exact path="/events" component={Calendar}/>
       </Switch>
     </div>
   );

@@ -156,3 +156,41 @@ export const deleteOrderThunk = orderId => async dispatch => {
     console.error(err);
   }
   };
+
+  // All events
+export const fetchAllEventsThunk = () => async (dispatch) => {
+  try {
+    let res = await axios.get(`${path}/events`)
+    dispatch(ac.fetchAllEvents(res.data))
+  } catch(error) {
+    console.log(error)
+  }
+}
+// Add event
+export const addEventThunk = (event) => async (dispatch) => {
+try {
+  let res = await axios.post(`${path}/events`, event);
+  dispatch(ac.addEvent(res.data));
+  return res.data
+} catch(err) {
+  console.error(err);
+}
+};
+// Edit Event
+export const editEventThunk = (event) => async (dispatch) => {
+try {
+  let res = await axios.put(`${path}/events/${event.id}`, event)
+  dispatch(ac.editOrder(res.data))
+} catch (error) {
+  console.log(error)
+}
+}
+// delete event
+export const deleteEventThunk = eventId => async dispatch => {
+  try {
+    await axios.delete(`${path}/events/${eventId}`);
+    dispatch(ac.deleteEvent(eventId));
+  } catch(err) {
+    console.error(err);
+  }
+  };
