@@ -16,11 +16,14 @@ import NewOrder from './Components/NewOrder';
 import EditOrder from './Components/EditOrder';
 import Order from './Components/Order';
 import Calendar from './Components/Calendar';
+import LoginPage from './Components/LoginPage';
 const App = () => {
+  // make it so that after login, it takes you to HomePage
   return (
     <div className="App">
       <Switch>
-      <Route exact path="/" component = {Homepage} />
+      <Route exact path="/" component={LoginPage} />
+      <Route exact path="/homepage" component={Homepage} />
       <Route exact path="/tasks" component={Tasks} />
       <Route exact path="/tasks/:id" component={Task} />
       <Route exact path="/employees" component={Employees} />
