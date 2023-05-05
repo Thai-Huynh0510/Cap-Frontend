@@ -5,3 +5,4 @@ export { default as allEmployees } from './employees';
 export { default as employee } from './employee';
 export { default as allOrders} from './orders';
 export { default as order} from './order';
+export { default as allEvents} from './events';

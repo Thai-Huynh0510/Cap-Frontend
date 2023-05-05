@@ -42,6 +42,7 @@ const AllEmployeesView = ({ employees, deleteEmployee }) => {
               <th>First Name</th>
               <th>Last Name</th>
               <th>Department</th>
+              <th>Tasks</th>
               <th>Actions</th>
             </tr>
             {employees.map(employee => {
@@ -57,6 +58,7 @@ const AllEmployeesView = ({ employees, deleteEmployee }) => {
                   </td>
                   <td><div className="center">{employee.last_name}</div></td>
                   <td><div className="center">{employee.department}</div></td>
+                  <td><div className="center">{employee.tasks.length}</div></td>
                   <td>
                     <div className="action-button-wrap">
                       <button

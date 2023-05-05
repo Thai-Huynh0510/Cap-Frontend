@@ -9,7 +9,7 @@ class Calendar extends Component {
     }
   
     render() {
-      console.log(this.props.Events);
+      console.log(this.props.allEvents);
       return (
         <CalendarView events={this.props.allEvents}
         deleteEvent={this.props.deleteEvent} />
