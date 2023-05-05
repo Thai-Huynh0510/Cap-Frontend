@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { Link } from "react-router-dom";
 import { addEmployeeThunk } from '../store/thunks';
 import NewEmployeeView from './views/NewEmployeeView';
 
@@ -66,7 +65,7 @@ class NewEmployee extends Component {
   render() {
 
     if (this.state.redirect) {
-      return (<Redirect to={`/employees`} />)
+      return (<Redirect to={`/employees/${this.state.redirectId}`} />)
     }
 
     return (

@@ -10,6 +10,8 @@ const EmployeeView = (props) => {
 
   if (!employee.tasks.length) {
     return (
+      <div>
+      <NavBar />
       <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -17,12 +19,14 @@ const EmployeeView = (props) => {
         margin: '6rem',
         flexDirection: 'column'
       }}>
+        <h1>{employee.first_name}  {employee.last_name} ({employee.department})</h1>
         <h2>Employee has no tasks</h2>
         <Link to={`employee.id/newtask`}>
           <button>
             Add Task
           </button>
         </Link>
+      </div>
       </div>
     )
   }
@@ -36,7 +40,6 @@ const EmployeeView = (props) => {
     await deleteEmployeeTask(task)
     await fetchEmployee(id)
   }
-
   return (
     <div>
       <NavBar />

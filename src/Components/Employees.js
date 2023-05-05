@@ -5,7 +5,6 @@ import AllEmployeesView from "./views/AllEmployeesView";
 
 class Employees extends Component {
   componentDidMount() {
-    console.log(this.props);
     this.props.fetchAllEmployees();
   }
 
