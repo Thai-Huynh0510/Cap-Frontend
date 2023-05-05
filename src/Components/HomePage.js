@@ -3,6 +3,7 @@ import { useHistory } from "react-router"
 import {MdPeopleAlt} from "react-icons/md"
 import {GrTasks} from "react-icons/gr"
 import {BiTask} from "react-icons/bi"
+import {BsFillCalendar2RangeFill} from "react-icons/bs"
 import { IconContext } from 'react-icons'
 const Homepage = () =>{
     const navigate = useHistory()
@@ -33,8 +34,10 @@ const Homepage = () =>{
       <button onClick={handleClickOrders}>View All Orders<br/>
       <GrTasks color = "blue"/>
       </button>
+      <button onClick={handleClickCalendar}>View Calendar<br/>
+      <BsFillCalendar2RangeFill/>
+        </button>
       </IconContext.Provider>
-      <button onClick={handleClickCalendar}>View Calendar<br/> </button>
     </div>
     )
 }

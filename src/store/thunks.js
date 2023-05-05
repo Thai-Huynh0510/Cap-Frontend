@@ -171,6 +171,7 @@ export const addEventThunk = (event) => async (dispatch) => {
 try {
   let res = await axios.post(`${path}/events`, event);
   dispatch(ac.addEvent(res.data));
+  window.location.reload();
   return res.data
 } catch(err) {
   console.error(err);
@@ -189,6 +190,7 @@ try {
 export const deleteEventThunk = eventId => async dispatch => {
   try {
     await axios.delete(`${path}/events/${eventId}`);
+    window.location.reload();
     dispatch(ac.deleteEvent(eventId));
   } catch(err) {
     console.error(err);
