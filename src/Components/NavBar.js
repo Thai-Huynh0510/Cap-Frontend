@@ -6,8 +6,11 @@ const NavBar = () => {
     <div className="nav-wrap">
       <nav>
         <ul style={{ listStyleType: 'none' }}>
+        <li>
+            <Link to="/">Log Out</Link>
+          </li>
           <li>
-            <Link to="/">Homepage</Link>
+            <Link to="/HomePage">Homepage</Link>
           </li>
           <li>
             <Link to="/tasks">View Tasks</Link>
@@ -17,6 +20,9 @@ const NavBar = () => {
           </li>
           <li>
             <Link to="/orders">View Orders</Link>
+          </li>
+          <li>
+            <Link to="/events">Calendar</Link>
           </li>
         </ul>
       </nav>
