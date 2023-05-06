@@ -27,8 +27,6 @@ const TasksView = ({ tasks, deleteTask }) => {
         <div className="all-tasks">
           <div className="header">
             <h1>Manage Tasks</h1>
-            <div className="notice">
-            </div>
           </div>
           <div>
             <table>

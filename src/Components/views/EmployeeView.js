@@ -19,7 +19,9 @@ const EmployeeView = (props) => {
         margin: '6rem',
         flexDirection: 'column'
       }}>
+        <div className="nameheader" >
         <h1>{employee.first_name}  {employee.last_name} ({employee.department})</h1>
+        </div>
         <h2>Employee has no tasks</h2>
         <Link to={`employee.id/newtask`}>
           <button>
@@ -44,7 +46,9 @@ const EmployeeView = (props) => {
     <div>
       <NavBar />
       <div className="single-task">
+        <div className="nameheader" >
         <h1>{employee.first_name}  {employee.last_name} ({employee.department})</h1>
+        </div>
         <h1 style={{ textAlign: 'center' }}>Tasks</h1>
         <table>
           <tbody>

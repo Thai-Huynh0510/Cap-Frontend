@@ -30,6 +30,7 @@ const EmployeeNewTaskView = (props) => {
                 type="text"
                 name="completion_status"
                 placeholder="completion status..."
+                Value="Not Completed"
                 required
                 minLength={5}
                 maxLength={20}

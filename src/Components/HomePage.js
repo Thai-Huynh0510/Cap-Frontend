@@ -22,7 +22,9 @@ const Homepage = () =>{
     }
     return (
         <div style={{textAlign: 'center', marginTop: '10rem'}}>
-      <h1>Employee Management System</h1>
+          <div className="header">
+            <h1>Employee Management System</h1>
+          </div>
       <IconContext.Provider value = {{ size : "30" }}>
       <button onClick={handleClickTasks}>View All Tasks <br/>
       <BiTask/> </button>

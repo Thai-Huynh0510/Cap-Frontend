@@ -24,8 +24,6 @@ const CalendarView = ({ events,deleteEvent, handleChange, handleSubmit }) => {
       <NavBar />
       <div className="header">
         <h1>Calendar</h1>
-        <div className="notice"></div>
-        <h2>Add New Event</h2>
       </div>
       <div className="edit-wrapper1">
       <form onSubmit={(e) => handleSubmit(e)}>
