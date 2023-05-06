@@ -1,6 +1,6 @@
 import React from "react"
 import NavBar from "../NavBar";
-
+import {BsPersonFillAdd} from "react-icons/bs";
 
 const NewEmployeeView = (props) => {
 
@@ -54,7 +54,8 @@ const NewEmployeeView = (props) => {
             <br />
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <button type="submit">
-                Add
+                Add {" "}
+              <BsPersonFillAdd/>
               </button>
             </div>
           </div>

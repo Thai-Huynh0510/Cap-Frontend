@@ -15,8 +15,6 @@ import { RiEdit2Line } from 'react-icons/ri';
       <div className="single-task">
         <div className="header">
           <h1 style={{ textAlign: 'center' }}>Task view</h1>
-          <div className="notice">
-          </div>
         </div>
         <div>
           <table>

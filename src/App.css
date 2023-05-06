@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
 .App {
   /* text-align: center; */
   margin: 0;
@@ -13,7 +16,7 @@
 
 button {
   font-size: medium;
-  border-radius: 15px;
+  border-radius: 20px;
   width: 10rem;
   border: none;
   background-color: royalblue;
@@ -55,6 +58,21 @@ button:hover {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #e9e7ec;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #0b0a0d,
+               1px 2px 0px #131016,
+               1px 3px 0px #312f32,
+               1px 4px 0px #353436,
+               1px 5px 0px #3d3b3e,
+               1px 6px 0px #3f3d40,
+               1px 10px 5px rgba(16, 16, 16, 0.5),
+               1px 15px 10px rgba(16, 16, 16, 0.4),
+               1px 20px 30px rgba(16, 16, 16, 0.3),
+               1px 25px 50px rgba(16, 16, 16, 0.2);
 }
 
 .action-button-wrap {
@@ -62,29 +80,54 @@ button:hover {
   align-items: center;
   margin: 5px;
 }
+
 table {
-  width: 100%;
+  width: 98%;
   border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 th,
 td {
   border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #0e0e0e;
   text-align: left;
-  white-space:pre;
+  white-space: pre;
   word-wrap: break-word;
 }
 
 th {
   text-align: center;
-  background-color: #F0F8FF;
+  color: #fbfafa;
+  background-color: #5d70c6;
+  padding: 5px;
 }
 
 td {
   background-color: #fafafa;
-  white-space:pre;
+  white-space: pre;
   word-wrap: break-word;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
+tbody{
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+td::before{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
 .delete-button {
   background-color: #ff4500;
   width: 3rem;
@@ -205,4 +248,88 @@ form {
 .calendar-wrapper {
   margin: 30px auto;
   max-width: 1500px;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5985cc);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+
+.nameheader {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Aclonica', cursive;
+  color: #fefafa;
+  text-shadow: 2px 2px 0px  #0c0c0c,
+               4px 4px 0px #494746,
+               6px 6px 0px #131313,
+               8px 8px 0px #161515,
+}
+/* login */
+
+.login { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.input-wrapper2 {
+  margin-bottom: 20px;
+}
+.login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+.inputlogin {
+  display: grid;
+  width: 300px;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2),
+    0 1px 1px rgba(255, 255, 255, 0.2);
+  -webkit-transition: box-shadow 0.5s ease;
+  -moz-transition: box-shadow 0.5s ease;
+  -o-transition: box-shadow 0.5s ease;
+  -ms-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+}
+.inputlogin:focus {
+  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
+    0 1px 1px rgba(255, 255, 255, 0.2);
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2),
+    0 1px 1px rgba(255, 255, 255, 0.2);
+  -webkit-transition: box-shadow 0.5s ease;
+  -moz-transition: box-shadow 0.5s ease;
+  -o-transition: box-shadow 0.5s ease;
+  -ms-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
 }

@@ -9,8 +9,6 @@ const OrdersView = ({ orders, deleteOrder }) => {
         <div className="all-tasks">
           <div className="header">
             <h1>Manage Orders</h1>
-            <div className="notice">
-            </div>
           </div>
           <div>
             <table>

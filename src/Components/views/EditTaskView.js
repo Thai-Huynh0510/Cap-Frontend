@@ -28,14 +28,15 @@ const EditTaskView = (props) => {
 
             <div className="input-wrapper">
               <label className="edit-form-label">Completion Status: </label>
-              <input
-                type="text"
+                <select
                 name="completion_status"
                 required
                 value={task.completion_status}
-                minLength={5}
-                maxLength={20}
-                onChange={(e) => handleChange(e)} />
+                onChange={(e) => handleChange(e)}
+              >
+                <option value="Not Completed">Not Completed</option>
+                <option value="Completed">Completed</option>
+              </select>
             </div>
             <br />
 
