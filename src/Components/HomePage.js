@@ -25,6 +25,8 @@ const Homepage = () =>{
           <div className="header">
             <h1>Employee Management System</h1>
           </div>
+          <br/>
+          <br/>
       <IconContext.Provider value = {{ size : "30" }}>
       <button onClick={handleClickTasks}>View All Tasks <br/>
       <BiTask/> </button>

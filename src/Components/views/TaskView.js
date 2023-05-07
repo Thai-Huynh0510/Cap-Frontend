@@ -14,7 +14,7 @@ import { RiEdit2Line } from 'react-icons/ri';
       <NavBar />
       <div className="single-task">
         <div className="header">
-          <h1 style={{ textAlign: 'center' }}>Task view</h1>
+          <h1 style={{ textAlign: 'center' }}>Task</h1>
         </div>
         <div>
           <table>
@@ -56,7 +56,9 @@ import { RiEdit2Line } from 'react-icons/ri';
           </table>
         </div>
               <div className="single-order">
+              <div className="header">
         <h1 style={{ textAlign: 'center' }}>Order</h1>
+        </div>
         <table>
           <tbody>
             <tr>
@@ -76,7 +78,7 @@ import { RiEdit2Line } from 'react-icons/ri';
                     {order.request}</td>
                   <td><div className="center">
                     {order.order_due_date}</div></td>
-                  <td>{order.customer}</td>
+                  <td><div className="center">{order.customer}</div></td>
                 </tr>
               )
             }): <p>No orders found</p>}

@@ -49,7 +49,9 @@ const EmployeeView = (props) => {
         <div className="nameheader" >
         <h1>{employee.first_name}  {employee.last_name} ({employee.department})</h1>
         </div>
+        <div className="header">
         <h1 style={{ textAlign: 'center' }}>Tasks</h1>
+        </div>
         <table>
           <tbody>
             <tr>
