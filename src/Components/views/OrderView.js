@@ -12,7 +12,9 @@ const OrderView = ({ order }) => {
       <div>
         <NavBar />
         <div className="single-order">
+        <div className="header">
           <h1 style={{ textAlign: 'center' }}>Order</h1>
+          </div>
           <table>
             <tbody>
               <tr>
@@ -28,7 +30,7 @@ const OrderView = ({ order }) => {
                       {order.request}</td>
                     <td><div className="center">
                       {order.order_due_date}</div></td>
-                    <td>{order.customer}</td>
+                    <td><div className="center">{order.customer}</div></td>
                     <td>
                       <button 
                         onClick={clickEditOrder}
