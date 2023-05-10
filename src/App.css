@@ -87,6 +87,7 @@ table {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 0 auto;
+
 }
 
 th,
@@ -102,7 +103,7 @@ td {
 th {
   text-align: center;
   color: #fbfafa;
-  background-color: #5d70c6;
+  background-color: #394867;
   padding: 5px;
 }
 
@@ -152,6 +153,7 @@ td::before{
   grid-gap: 15px;
   white-space: pre-line;
   overflow: hidden;
+
 }
 .input-wrapper1 {
   display: grid;
@@ -171,12 +173,12 @@ form {
   justify-content: left;
   align-items: center;
   flex-direction: column;
-  background-color: ghostwhite;
+  background-color: #9BA4B5;
   padding: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 50px 25%;
   border-radius: 15px;
-  color: mediumblue
+  color: ghostwhite;
 }
 .edit-wrapper1 {
   display: flex;
@@ -199,7 +201,7 @@ form {
 }
 /* Nav bar */
 .nav-wrap {
-  background-color: midnightblue;
+  background-color: #212A3E;
   display: flex;
 }
 
@@ -235,7 +237,7 @@ form {
 }
 /* Notice message */
 .notice {
-  border: 1px solid mediumblue;
+  border: 1px solid #394867;
   margin-bottom: 1rem;
   width: fit-content;
   display: inline-table;
@@ -257,10 +259,12 @@ body {
 
 body {
 	margin: 0;
-	background: linear-gradient(45deg, #49a09d, #5985cc);
+  background: url("/public/background.png");
+  background-size: cover;
+  width: 100%;
 	font-family: sans-serif;
 	font-weight: 100;
-}
+} 
 
 
 .nameheader {
@@ -308,7 +312,7 @@ body {
   transition: box-shadow 0.5s ease;
 }
 .inputlogin:focus {
-  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
+  box-shadow: inset 0 -5px 45px rgba(201, 199, 199, 0.4),
     0 1px 1px rgba(255, 255, 255, 0.2);
 }
 .login form {
@@ -316,7 +320,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
+  background:#9BA4B5;
   border: none;
   outline: none;
   padding: 20px;
@@ -326,7 +330,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2),
-    0 1px 1px rgba(255, 255, 255, 0.2);
+    0 1px 1px rgba(235, 218, 218, 0.2);
   -webkit-transition: box-shadow 0.5s ease;
   -moz-transition: box-shadow 0.5s ease;
   -o-transition: box-shadow 0.5s ease;
