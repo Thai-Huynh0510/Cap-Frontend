@@ -22,7 +22,9 @@ const EmployeeView = (props) => {
         <div className="nameheader" >
         <h1>{employee.first_name}  {employee.last_name} ({employee.department})</h1>
         </div>
+        <div className="no_task">
         <h2>Employee has no tasks</h2>
+        </div>
         <Link to={`employee.id/newtask`}>
           <button>
             Add Task

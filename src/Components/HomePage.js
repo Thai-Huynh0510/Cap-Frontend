@@ -23,7 +23,7 @@ const Homepage = () =>{
     return (
         <div style={{textAlign: 'center', marginTop: '10rem'}}>
           <div className="header">
-            <h1>Employee Management System</h1>
+            <h1>EMpower </h1>
           </div>
           <br/>
           <br/>

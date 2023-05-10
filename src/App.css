@@ -60,9 +60,9 @@ button:hover {
   flex-direction: column;
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   color: #e9e7ec;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-shadow: 1px 1px 0px #0b0a0d,
                1px 2px 0px #131016,
                1px 3px 0px #312f32,
@@ -235,18 +235,7 @@ form {
 .single-task {
   margin: 0px 20px;
 }
-/* Notice message */
-.notice {
-  border: 1px solid #394867;
-  margin-bottom: 1rem;
-  width: fit-content;
-  display: inline-table;
-  border-radius: 10px;
-  padding: 0px 0.5rem;
-  margin-top: -8px;
-  background-color: #e8f4f8;
-  color: mediumblue;
-}
+
 .calendar-wrapper {
   margin: 30px auto;
   max-width: 1500px;
@@ -259,7 +248,7 @@ body {
 
 body {
 	margin: 0;
-  background: url("/public/background.png");
+  background: url("/public/Webpik.png");
   background-size: cover;
   width: 100%;
 	font-family: sans-serif;
@@ -271,7 +260,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   font-family: 'Aclonica', cursive;
-  color: #fefafa;
+  color: #fff;
   text-shadow: 2px 2px 0px  #0c0c0c,
                4px 4px 0px #494746,
                6px 6px 0px #131313,
@@ -336,4 +325,8 @@ body {
   -o-transition: box-shadow 0.5s ease;
   -ms-transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
+}
+
+.no_task{
+  color:white;
 }
