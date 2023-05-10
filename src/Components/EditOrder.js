@@ -69,7 +69,7 @@ class EditOrder extends Component {
 
   render() {
     if (this.state.redirect) {
-      return (<Redirect to={`/tasks/${this.state.redirectId}`} />)
+      return (<Redirect to={`/orders/${this.state.redirectId}`} />)
     }
 
     return (
